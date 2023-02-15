@@ -1,6 +1,8 @@
 FROM python:3.11.2-slim
 
 ### Settings for development environment
+# Change default Shell to bash
+SHELL ["/bin/bash", "-c"]
 ENV TZ=Asia/Seoul
 ENV PYTHONIOENCODING=UTF-8
 # Change bash shell prompt color of root account
