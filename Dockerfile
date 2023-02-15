@@ -28,3 +28,5 @@ RUN apt update &&\
     apt install -y \
         git\
         zip
+
+RUN apt clean
