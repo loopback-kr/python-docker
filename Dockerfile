@@ -23,6 +23,7 @@ RUN mkdir -p ~/.config/pip &&\
     echo -e \
 "[global]\n"\
 "index-url=https://mirror.kakao.com/pypi/simple/\n"\
+"extra-index-url=https://pypi.org/simple/\n"\
 "trusted-host=mirror.kakao.com\n"\
     > ~/.config/pip/pip.conf &&\
     pip install --no-cache-dir -U pip
