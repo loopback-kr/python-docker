@@ -29,4 +29,5 @@ RUN apt update &&\
         git\
         zip
 
-RUN apt clean
+RUN apt clean &&\
+    rm -rf /var/lib/apt/lists/*
