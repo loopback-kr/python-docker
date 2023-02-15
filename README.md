@@ -15,3 +15,10 @@ Container images for python are available in [loopbackkr's DockerHub repository]
 `FROM loopbackkr/python:latest`
 
 `FROM loopbackkr/python:3.11.2-slim`
+
+## Features
+
+* Use [kakao mirror](https://mirror.kakao.com/) reposistory for apt and pip
+* Pretty welcome message with version log
+* Colorful bash prompt
+* preinstalled vim, git
