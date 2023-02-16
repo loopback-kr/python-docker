@@ -1,6 +1,6 @@
 # Python for Asia/Seoul region
 
-Container images for python are available in [loopbackkr's DockerHub repository](https://hub.docker.com/repository/docker/loopbackkr/python).
+Container images for python are available in [loopbackkr's DockerHub repository](https://hub.docker.com/r/loopbackkr/python).
 
 ## Quick start
 
@@ -8,13 +8,13 @@ Container images for python are available in [loopbackkr's DockerHub repository]
 
 `docker pull loopbackkr/python:latest`
 
-`docker pull loopbackkr/python:3.11.2-slim`
+`docker pull loopbackkr/python:3.11.2`
 
 ### Dockerfiling
 
 `FROM loopbackkr/python:latest`
 
-`FROM loopbackkr/python:3.11.2-slim`
+`FROM loopbackkr/python:3.11.2`
 
 ## Features
 
