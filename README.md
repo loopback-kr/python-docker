@@ -8,13 +8,13 @@ Container images for python are available in [loopbackkr's DockerHub repository]
 
 `docker pull loopbackkr/python:latest`
 
-`docker pull loopbackkr/python:3.11.2-slim`
+`docker pull loopbackkr/python:3.11`
 
 ### Dockerfiling
 
 `FROM loopbackkr/python:latest`
 
-`FROM loopbackkr/python:3.11.2-slim`
+`FROM loopbackkr/python:3.11`
 
 ## Features
 

@@ -14,7 +14,7 @@ RUN echo 'alias ll="ls -alh --full-time"' >> ~/.bashrc
 RUN echo 'alias cls="clear"' >> ~/.bashrc
 # Add welcome message
 RUN echo "echo -e '\x1b[0;34m                  _____ ______                   #!/usr/bin/python              \n________ _____  ____  /____  /_ ______ _______   import sys, os, string, re     \n___  __ \__  / / /_  __/__  __ \_  __ \__  __ \  if __name__=="__main__":       \n__  /_/ /_  /_/ / / /_  _  / / // /_/ /_  / / /  for File in File_Dict: ....... \n_  .___/ _\__, /  \__/  /_/ /_/ \____/ /_/ /_/                                  \n/_/      /____/                                  \x1b[0;94mLife is short, You need Python.'" >> ~/.bashrc
-RUN echo "echo -e '\x1b[0;33m'\$(sed -n '/^NAME=/p' /etc/os-release | cut -d '\"' -f 2)'\t'\$(sed -n '/VERSION=/p' /etc/os-release | cut -d '\"' -f 2)" >> ~/.bashrc
+RUN echo "echo -e '\n\x1b[0;33m'\$(sed -n '/^NAME=/p' /etc/os-release | cut -d '\"' -f 2)'\t'\$(sed -n '/VERSION=/p' /etc/os-release | cut -d '\"' -f 2)" >> ~/.bashrc
 RUN echo "echo -e 'Python \t\t\t'\$(python -V | cut -d ' ' -f 2)" >> ~/.bashrc
 RUN echo "echo -e 'Pip \t\t\t'\$(pip -V | cut -d '(' -f 1 | cut -d ' ' -f 2-)" >> ~/.bashrc
 RUN echo "echo -e '\t\t\t'\$(sed -n '/index-url/p' ~/.config/pip/pip.conf)" >> ~/.bashrc
