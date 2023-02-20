@@ -22,3 +22,7 @@ Container images for python are available in [loopbackkr's DockerHub repository]
 * Pretty welcome message with version log
 * Colorful bash prompt
 * preinstalled vim, git
+
+## References
+
+* [Status of Python Verions](https://devguide.python.org/versions/)
