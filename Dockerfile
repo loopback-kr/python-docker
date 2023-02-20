@@ -1,4 +1,4 @@
-FROM python:3.8.16-slim
+FROM python:3.8-slim
 
 # Change default Shell to bash
 SHELL ["/bin/bash", "-c"]
