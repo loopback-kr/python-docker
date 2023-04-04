@@ -18,7 +18,7 @@ Container images for python are available in [loopbackkr's DockerHub repository]
 
 ## Features
 
-* Use [kakao mirror](https://mirror.kakao.com/) reposistory for apt and pip
+* Use [kakao mirror](http://mirror.kakao.com/) reposistory for apt and pip
 * Pretty welcome message with version log
 * Colorful bash prompt
 * preinstalled vim, git
