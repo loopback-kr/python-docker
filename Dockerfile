@@ -1,4 +1,4 @@
-FROM python:3.11-slim
+FROM python:3.12-slim
 
 # Change default Shell to bash
 SHELL ["/bin/bash", "-c"]
@@ -8,12 +8,12 @@ ENV PYTHONIOENCODING=UTF-8
 # Add bash shell prompt color of root
 RUN echo "PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]# '" >> /root/.bashrc
 # Change Ubuntu repository to Kakao mirror
-RUN sed -i "s|http://deb.debian.org/debian |https://mirror.kakao.com/debian |g" /etc/apt/sources.list
+RUN sed -i "s|http://deb.debian.org/debian |https://mirror.kakao.com/debian |g" /etc/apt/sources.list.d/debian.sources
 # Add Bash alias
 RUN echo 'alias ll="ls -alh --full-time"' >> ~/.bashrc
 RUN echo 'alias cls="clear"' >> ~/.bashrc
 # Add welcome message
-RUN echo "echo -e '\x1b[0;34m                  _____ ______                   #!/usr/bin/python              \n________ _____  ____  /____  /_ ______ _______   import sys, os, string, re     \n___  __ \__  / / /_  __/__  __ \_  __ \__  __ \  if __name__=="__main__":       \n__  /_/ /_  /_/ / / /_  _  / / // /_/ /_  / / /  for File in File_Dict: ....... \n_  .___/ _\__, /  \__/  /_/ /_/ \____/ /_/ /_/                                  \n/_/      /____/                                  \x1b[0;94mLife is short, You need Python.'" >> ~/.bashrc
+RUN echo "echo -e '\x1b[0;34m                  _____ ______                                                  \n________ _____  ____  /____  /_ ______ _______                                  \n___  __ \__  / / /_  __/__  __ \_  __ \__  __ \                                 \n__  /_/ /_  /_/ / / /_  _  / / // /_/ /_  / / /                                 \n_  .___/ _\__, /  \__/  /_/ /_/ \____/ /_/ /_/                                  \n/_/      /____/                                  \x1b[0;94m                               '" >> ~/.bashrc
 RUN echo "echo -e '\n\x1b[0;33m'\$(sed -n '/^NAME=/p' /etc/os-release | cut -d '\"' -f 2)'\t'\$(sed -n '/VERSION=/p' /etc/os-release | cut -d '\"' -f 2)" >> ~/.bashrc
 RUN echo "echo -e 'Python \t\t\t'\$(python -V | cut -d ' ' -f 2)" >> ~/.bashrc
 RUN echo "echo -e 'Pip \t\t\t'\$(pip -V | cut -d '(' -f 1 | cut -d ' ' -f 2-)" >> ~/.bashrc
