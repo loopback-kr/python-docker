@@ -1,4 +1,4 @@
-FROM python:3.11-slim
+FROM python:3.12-slim
 
 # Change default Shell to bash
 SHELL ["/bin/bash", "-c"]
@@ -8,7 +8,7 @@ ENV PYTHONIOENCODING=UTF-8
 # Add bash shell prompt color of root
 RUN echo "PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]# '" >> /root/.bashrc
 # Change Ubuntu repository to Kakao mirror
-RUN sed -i "s|http://deb.debian.org/debian |https://mirror.kakao.com/debian |g" /etc/apt/sources.list
+RUN sed -i "s|http://deb.debian.org/debian |https://mirror.kakao.com/debian |g" /etc/apt/sources.list.d/debian.sources
 # Add Bash alias
 RUN echo 'alias ll="ls -alh --full-time"' >> ~/.bashrc
 RUN echo 'alias cls="clear"' >> ~/.bashrc
